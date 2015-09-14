@@ -1,0 +1,129 @@
+@user-purple : #8164A3;
+@user-blue   : #4E82BD;
+
+/* 设置基础样式 */
+ul > li {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/*
+* 基础文字样式
+* 雅黑字体
+* 文字居中
+*/
+.base-text {
+  text-align: center;
+  font-family: Microsoft YaHei;
+  color: white;
+  margin: 0px;
+}
+
+/* 50%的透明度 */
+.lucency {
+  opacity: 0.5;
+}
+
+/* 主信息块宽高 */
+.main-info-size {
+  width: 200px;
+  //height:15px;
+}
+
+/* 标准元素块宽高 */
+.normal-info-size {
+  width: 100px;
+  //height:15px;
+}
+
+/* 主信息块颜色 */
+.main-info-color {
+  background-color: @user-purple;
+  .lucency;
+}
+
+.normal-info-color {
+  background-color: @user-blue;
+  .lucency;
+}
+
+/* 第一个li元素，亦即『任务集周报』元素 */
+li:first-child > div {
+  .main-info-size;
+  .main-info-color;
+}
+
+.help {
+  background-color: white;
+}
+
+/* 提供小方块的效果 */
+.help::after {
+  content: '■';
+  /* 紫色半透明 */
+  color: @user-purple;
+  .lucency;
+
+  position: relative;
+  top: 15px;
+}
+
+/* 正常li元素 */
+ul > li > div {
+  .normal-info-size;
+  .normal-info-color;
+}
+
+li:first-child {
+  /* 第一个li元素清除左侧浮动，以提供正常换行功能 */
+  clear: left;
+}
+
+p:first-child {
+  font-size: 12px;
+  .base-text;
+}
+
+p:last-child {
+  font-size: 22px;
+  .base-text;
+}
+
+.selected {
+  /* 上层颜色完全显示 */
+  opacity: 1;
+  /* 仅供测试，理想情况是党为元素加上selected类时，元素自动添加阴影并设为50的透明度 */
+  background-position: 50px 100px;
+
+  /* 白边效果 */
+  border-bottom: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: white;
+  border-right: solid;
+  border-right-width: 2px;
+  border-right-color: white;
+}
+
+ul > li > div:hover {
+  .selected;
+  box-shadow: 5px 5px 0px fade(@user-blue, 50%);
+}
+
+ul > li:hover {
+  margin-left: 18px;
+  margin-bottom: 18px;
+}
+
+li:first-child > div:hover {
+  .selected;
+  box-shadow: 5px 5px 0px fade(@user-purple, 50%);
+}
+
+.help::after :hover {
+  opacity: 1;
+}
+
+
+

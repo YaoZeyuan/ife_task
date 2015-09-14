@@ -1,0 +1,147 @@
+/* 设置基础样式 */
+ul > li {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/*
+* 基础文字样式
+* 雅黑字体
+* 文字居中
+*/
+.base-text {
+    text-align: center;
+    font-family: Microsoft YaHei;
+    color: white;
+    margin: 0px;
+}
+
+/* 50%的透明度 */
+.lucency {
+    opacity: 0.5;
+}
+
+/* 主信息块宽高 */
+.main-info-size {
+    width: 200px;
+}
+
+/* 标准元素块宽高 */
+.normal-info-size {
+    width: 100px;
+}
+
+/* 主信息块颜色 */
+.main-info-color {
+    background-color: #8164a3;
+    opacity: 0.5;
+}
+
+.normal-info-color {
+    background-color: #4e82bd;
+    opacity: 0.5;
+}
+
+/* 第一个li元素，亦即『任务集周报』元素 */
+li:first-child > div {
+    width: 200px;
+    background-color: #8164a3;
+    opacity: 0.5;
+}
+
+.help {
+    background-color: white;
+}
+
+/* 提供小方块的效果 */
+.help::after {
+    content: '■';
+    /* 紫色半透明 */
+    color: #8164a3;
+    opacity: 0.5;
+    position: relative;
+    top: 15px;
+}
+
+/* 正常li元素 */
+ul > li > div {
+    width: 100px;
+    background-color: #4e82bd;
+    opacity: 0.5;
+}
+
+li:first-child {
+    /* 第一个li元素清除左侧浮动，以提供正常换行功能 */
+    clear: left;
+}
+
+p:first-child {
+    font-size: 12px;
+    text-align: center;
+    font-family: Microsoft YaHei;
+    color: white;
+    margin: 0px;
+}
+
+p:last-child {
+    font-size: 22px;
+    text-align: center;
+    font-family: Microsoft YaHei;
+    color: white;
+    margin: 0px;
+}
+
+.selected {
+    /* 上层颜色完全显示 */
+    opacity: 1;
+    /* 仅供测试，理想情况是党为元素加上selected类时，元素自动添加阴影并设为50的透明度 */
+    background-position: 50px 100px;
+    /* 白边效果 */
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    border-right: solid;
+    border-right-width: 2px;
+    border-right-color: white;
+}
+
+ul > li > div:hover {
+    /* 上层颜色完全显示 */
+    opacity: 1;
+    /* 仅供测试，理想情况是党为元素加上selected类时，元素自动添加阴影并设为50的透明度 */
+    background-position: 50px 100px;
+    /* 白边效果 */
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    border-right: solid;
+    border-right-width: 2px;
+    border-right-color: white;
+    box-shadow: 5px 5px 0px rgba(78, 130, 189, 0.5);
+}
+
+ul > li:hover {
+    margin-left: 18px;
+    margin-bottom: 18px;
+}
+
+li:first-child > div:hover {
+    /* 上层颜色完全显示 */
+    opacity: 1;
+    /* 仅供测试，理想情况是党为元素加上selected类时，元素自动添加阴影并设为50的透明度 */
+    background-position: 50px 100px;
+    /* 白边效果 */
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    border-right: solid;
+    border-right-width: 2px;
+    border-right-color: white;
+    box-shadow: 5px 5px 0px rgba(129, 100, 163, 0.5);
+}
+
+.help::after :hover {
+    opacity: 1;
+}
